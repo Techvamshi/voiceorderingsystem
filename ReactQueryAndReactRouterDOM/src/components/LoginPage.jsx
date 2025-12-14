@@ -181,25 +181,7 @@ const LoginPage = () => {
           </div>
 
           {/* App Download CTA */}
-          <div className="app-cta">
-            <p className="app-text">Get faster delivery with our app</p>
-            <div className="app-buttons">
-              <button className="app-btn ios">
-                <span className="app-icon"></span>
-                <div className="app-info">
-                  <span className="app-label">Download on the</span>
-                  <span className="app-store">App Store</span>
-                </div>
-              </button>
-              <button className="app-btn android">
-                <span className="app-icon">▷</span>
-                <div className="app-info">
-                  <span className="app-label">Get it on</span>
-                  <span className="app-store">Google Play</span>
-                </div>
-              </button>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
