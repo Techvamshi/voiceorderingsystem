@@ -1,0 +1,423 @@
+/* AttentionGrabSection.css */
+.attentionGrabContainer {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 20, 0.98));
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  width: 95%;
+  border: 1px solid rgba(183, 115, 84, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.attentionGrabContainer:hover {
+  border-color: rgba(183, 115, 84, 0.4);
+  box-shadow: 0 25px 70px rgba(183, 115, 84, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Background Glow */
+.bgGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(183, 115, 84, 0.1) 0%, transparent 70%);
+  opacity: 0.3;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+/* Main Content Layout */
+.grabContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Flash Badge */
+.flashBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 120px;
+}
+
+.flashIcon {
+  font-size: 3rem;
+  animation: flash 1.5s infinite;
+  filter: drop-shadow(0 0 10px rgba(183, 115, 84, 0.5));
+}
+
+@keyframes flash {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.flashBadge span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #B77354;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #B77354, #D08A68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Main Offer */
+.mainOffer {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.offerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.gradientText {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(90deg, #B77354, #FFD700, #B77354);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.onText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+}
+
+.offerSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Countdown Timer */
+.countdownTimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.timeUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  background: rgba(183, 115, 84, 0.2);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  min-width: 80px;
+  text-align: center;
+  border: 1px solid rgba(183, 115, 84, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeNumber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: numberShine 2s ease-in-out infinite;
+}
+
+@keyframes numberShine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.timeLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.timeSeparator {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #B77354;
+  margin-top: -1rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* CTA Section */
+.grabCTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-width: 200px;
+}
+
+.grabButton {
+  background: linear-gradient(135deg, #B77354, #D08A68);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.grabButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.grabButton:hover::before {
+  left: 100%;
+}
+
+.grabButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(183, 115, 84, 0.4);
+}
+
+.buttonArrow {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.grabButton:hover .buttonArrow {
+  transform: translateX(5px);
+}
+
+/* Sold Counter */
+.soldCounter {
+  width: 100%;
+}
+
+.soldProgress {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  width: 65%;
+  background: linear-gradient(90deg, #B77354, #D08A68);
+  border-radius: 3px;
+  position: relative;
+  animation: progressPulse 2s ease-in-out infinite;
+}
+
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.progressBar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.soldText {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Floating Elements */
+.floatingElement {
+  position: absolute;
+  background: rgba(183, 115, 84, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(183, 115, 84, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+.discountTag {
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #B77354;
+  animation-delay: 0s;
+}
+
+.clockIcon {
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(3deg); }
+  66% { transform: translateY(-5px) rotate(-3deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grabContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .flashBadge {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .gradientText {
+    font-size: 3.5rem;
+  }
+  
+  .mainOffer {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .attentionGrabContainer {
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+  }
+  
+  .gradientText {
+    font-size: 2.8rem;
+  }
+  
+  .countdownTimer {
+    gap: 1rem;
+  }
+  
+  .timeNumber {
+    font-size: 2rem;
+    min-width: 60px;
+    padding: 0.6rem 1rem;
+  }
+  
+  .timeSeparator {
+    font-size: 1.5rem;
+  }
+  
+  .grabButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .attentionGrabContainer {
+    padding: 1.5rem;
+  }
+  
+  .gradientText {
+    font-size: 2.2rem;
+  }
+  
+  .onText {
+    font-size: 1.2rem;
+  }
+  
+  .countdownTimer {
+    flex-wrap: wrap;
+  }
+  
+  .timeUnit {
+    min-width: 70px;
+  }
+  
+  .floatingElement {
+    display: none;
+  }
+}

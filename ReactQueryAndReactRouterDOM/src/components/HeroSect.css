@@ -1,0 +1,540 @@
+/* HeroSect.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HeroContainer {
+  min-height: 100vh;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+/* Abstract Background */
+.BackgroundPatterns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.Pattern {
+  position: absolute;
+  background: rgba(183, 115, 84, 0.05);
+  border-radius: 4px;
+}
+
+.pattern1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  right: 10%;
+  transform: rotate(45deg);
+  border: 1px solid rgba(183, 115, 84, 0.1);
+  animation: floatPattern 20s infinite linear;
+}
+
+.pattern2 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 5%;
+  transform: rotate(20deg);
+  border: 1px solid rgba(183, 115, 84, 0.1);
+  animation: floatPattern 15s infinite linear reverse;
+}
+
+.pattern3 {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 15%;
+  transform: rotate(-15deg);
+  border: 1px solid rgba(183, 115, 84, 0.1);
+  animation: floatPattern 25s infinite linear;
+}
+
+@keyframes floatPattern {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(-20px); }
+}
+
+.HeroContent {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Left Column */
+.HeroLeft {
+  padding-right: 2rem;
+}
+
+/* Brand Header - Edgy Style */
+.BrandHeader {
+  margin-bottom: 3rem;
+}
+
+.BrandName {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+}
+
+.BrandAccent {
+  color: #B77354;
+  margin-left: 0.5rem;
+}
+
+.BrandTagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #B77354;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  background: rgba(183, 115, 84, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid rgba(183, 115, 84, 0.2);
+}
+
+/* Main Message - Gen Z Typography */
+.MainMessage {
+  margin-bottom: 3rem;
+}
+
+.HeroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.TitleLine {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.Highlight {
+  color: #B77354;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+}
+
+.Highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #B77354;
+  border-radius: 2px;
+}
+
+.Timer {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.HeroDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+
+.BoldText {
+  color: #B77354;
+  font-weight: 700;
+}
+
+/* Action Buttons - Blocky Style */
+.ActionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.PrimaryButton {
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  background: #B77354;
+  color: white;
+}
+
+.PrimaryButton:hover {
+  background: #C78263;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(183, 115, 84, 0.4);
+}
+
+.ButtonIcon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.PrimaryButton:hover .ButtonIcon {
+  transform: scale(1.2);
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Features Grid - Boxy Cards */
+.FeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 550px;
+  margin-top: 2rem;
+}
+
+.FeatureCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.FeatureCard:hover {
+  transform: translateY(-5px);
+  background: rgba(183, 115, 84, 0.1);
+  border-color: rgba(183, 115, 84, 0.3);
+}
+
+.FeatureGlow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.FeatureCard:hover .FeatureGlow {
+  left: 100%;
+}
+
+.FeatureIconBox {
+  font-size: 1.8rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(183, 115, 84, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.FeatureContent {
+  flex: 1;
+}
+
+.FeatureTitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.FeatureDesc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* Right Column - Product Cards */
+.HeroRight {
+  position: relative;
+}
+
+.VisualContainer {
+  position: relative;
+}
+
+/* Product Cards - Floating Grid */
+.ProductCards {
+  position: relative;
+  height: 500px;
+  width: 600px;
+}
+
+.Card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.Card:hover {
+  transform: scale(1.05);
+  border-color: rgba(183, 115, 84, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card1 {
+  width: 220px;
+  height: 280px;
+  top: 20px;
+  left: 50px;
+  transform: rotate(-5deg);
+  z-index: 3;
+  animation: floatCard1 6s ease-in-out infinite;
+}
+
+.card2 {
+  width: 240px;
+  height: 300px;
+  top: 80px;
+  left: 200px;
+  transform: rotate(3deg);
+  z-index: 2;
+  animation: floatCard2 6s ease-in-out infinite 0.5s;
+}
+
+.card3 {
+  width: 200px;
+  height: 260px;
+  top: 140px;
+  left: 350px;
+  transform: rotate(-2deg);
+  z-index: 1;
+  animation: floatCard3 6s ease-in-out infinite 1s;
+}
+
+@keyframes floatCard1 {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-5deg) translateY(-15px); }
+}
+
+@keyframes floatCard2 {
+  0%, 100% { transform: rotate(3deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-15px); }
+}
+
+@keyframes floatCard3 {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50% { transform: rotate(-2deg) translateY(-15px); }
+}
+
+.CardBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #B77354;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+
+.CardImage {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.CardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.Card:hover .CardImage img {
+  transform: scale(1.1);
+}
+
+.CardLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .HeroContent {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+  
+  .HeroLeft {
+    padding-right: 0;
+  }
+  
+  .HeroDescription {
+    margin: 0 auto 3rem;
+  }
+  
+  .ActionButtons {
+    justify-content: center;
+  }
+  
+  .FeaturesGrid {
+    margin: 2rem auto 0;
+    max-width: 500px;
+  }
+  
+  .ProductCards {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  
+  .card1, .card2, .card3 {
+    position: relative;
+    width: 180px;
+    height: 240px;
+    top: auto;
+    left: auto;
+    margin: 1rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroContent {
+    padding: 0 2rem;
+    gap: 3rem;
+  }
+  
+  .BrandName {
+    font-size: 3rem;
+  }
+  
+  .HeroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .ActionButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .PrimaryButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .FeaturesGrid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 1.5rem;
+  }
+  
+  .ProductCards {
+    height: 350px;
+  }
+  
+  .card1, .card2, .card3 {
+    width: 150px;
+    height: 200px;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .HeroContent {
+    padding: 0 1.5rem;
+  }
+  
+  .BrandName {
+    font-size: 2.5rem;
+  }
+  
+  .HeroTitle {
+    font-size: 2rem;
+  }
+  
+  .HeroDescription {
+    font-size: 1rem;
+  }
+  
+  .FeaturesGrid {
+    gap: 1rem;
+  }
+  
+  .FeatureCard {
+    padding: 1rem;
+  }
+  
+  .ProductCards {
+    height: 300px;
+  }
+  
+  .card1, .card2, .card3 {
+    width: 120px;
+    height: 160px;
+  }
+}

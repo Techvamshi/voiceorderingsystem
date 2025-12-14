@@ -1,0 +1,13 @@
+# Node
+node_modules/
+.env
+
+# React
+ReactQueryAndReactRouterDOM/node_modules/
+ReactQueryAndReactRouterDOM/build/
+
+# Backend
+Backend/node_modules/
+
+# Logs
+npm-debug.log*

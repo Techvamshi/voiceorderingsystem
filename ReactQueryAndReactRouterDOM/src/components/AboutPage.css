@@ -1,0 +1,607 @@
+/* AboutPage.css */
+.aboutContainer {
+  background: #000000;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  margin-top: 50px;
+}
+
+/* Hero Section */
+.aboutHero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0%, rgba(183, 115, 84, 0.1) 0%, transparent 70%);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(183, 115, 84, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(183, 115, 84, 0.3);
+  margin-bottom: 2rem;
+}
+
+.heroBadge span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #B77354;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.heroTitle .highlight {
+  color: #B77354;
+  display: block;
+}
+
+.heroDescription {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+}
+
+.heroStats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #B77354, #D08A68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+}
+
+/* Mission Section */
+.missionSection {
+  padding: 8rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.missionText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.missionQuote {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #B77354;
+  font-style: italic;
+  padding-left: 2rem;
+  border-left: 3px solid #B77354;
+}
+
+.missionVisual {
+  position: relative;
+  height: 400px;
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+.gridItem {
+  background: rgba(183, 115, 84, 0.1);
+  border: 1px solid rgba(183, 115, 84, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.gridItem:hover {
+  background: rgba(183, 115, 84, 0.2);
+  transform: translateY(-5px);
+}
+
+.item1 {
+  grid-row: span 2;
+  animation: float 6s ease-in-out infinite;
+}
+
+.item2 {
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+.item3 {
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.item4 {
+  animation: float 6s ease-in-out infinite 3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Founders Section */
+.foundersSection {
+  padding: 8rem 5%;
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.foundersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founderCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.founderCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(183, 115, 84, 0.3);
+  transform: translateY(-10px);
+}
+
+.founderImageContainer {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.founderImagePlaceholder {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #B77354, #D08A68);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.founderImagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.imageInitial {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.founderSocial {
+  text-align: center;
+}
+
+.socialLink {
+  color: #B77354;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #D08A68;
+  transform: translateX(3px);
+}
+
+.founderInfo {
+  text-align: center;
+}
+
+.founderRole {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #B77354;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.founderName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.founderBio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.founderQuote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #B77354;
+  font-weight: 500;
+  padding: 1rem;
+  background: rgba(183, 115, 84, 0.1);
+  border-radius: 10px;
+  border-left: 3px solid #B77354;
+}
+
+.founderAccent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(183, 115, 84, 0.1) 0%, transparent 70%);
+  filter: blur(20px);
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 8rem 5%;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.valueCard:hover {
+  background: rgba(183, 115, 84, 0.05);
+  border-color: rgba(183, 115, 84, 0.3);
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.valueDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Timeline Section */
+.timelineSection {
+  padding: 8rem 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #B77354;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  z-index: 2;
+}
+
+.timelineContent {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+  background: rgba(183, 115, 84, 0.05);
+  border-color: rgba(183, 115, 84, 0.3);
+  transform: translateX(10px);
+}
+
+.timelineYear {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #B77354;
+  margin-bottom: 0.5rem;
+}
+
+.timelineTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.timelineDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timelineConnector {
+  position: absolute;
+  left: -1.5rem;
+  top: 12px;
+  bottom: -12px;
+  width: 2px;
+  background: rgba(183, 115, 84, 0.3);
+}
+
+/* CTA Section */
+.aboutCTA {
+  padding: 8rem 5%;
+  background: rgba(183, 115, 84, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.ctaDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 200px;
+}
+
+.ctaButton.primary {
+  background: #B77354;
+  color: white;
+}
+
+.ctaButton.primary:hover {
+  background: #C78263;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(183, 115, 84, 0.3);
+}
+
+.ctaButton.secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ctaButton.secondary:hover {
+  border-color: #B77354;
+  color: #B77354;
+  background: rgba(183, 115, 84, 0.1);
+}
+
+.ctaPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(183, 115, 84, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(183, 115, 84, 0.05) 0%, transparent 50%);
+  opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .missionSection {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero {
+    padding: 4rem 5%;
+    min-height: auto;
+  }
+  
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.1rem;
+  }
+  
+  .founderCard {
+    padding: 2rem;
+  }
+  
+  .founderName {
+    font-size: 1.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroStats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .foundersGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .missionQuote {
+    font-size: 1.2rem;
+  }
+}
