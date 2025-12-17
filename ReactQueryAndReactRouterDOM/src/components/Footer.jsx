@@ -4,7 +4,7 @@ import "./HeaderCss.css"
 const Footer = () => {
   return (
     <div className='Foot'>
-        Made with 💗 ~ Vamshi
+        Made with 💗 ~ YSSV
     </div>
   )
 }

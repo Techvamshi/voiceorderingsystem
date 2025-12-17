@@ -16,7 +16,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'Vam@123',
-    database: 'skipp'
+    database: 'voiceassistant'
 });
 
 db.connect(err => {
@@ -157,11 +157,11 @@ app.post('/voice/command', async (req, res) => {
         
         const categories = [...new Set(items.map(item => item.Category))];
         
-        const systemPrompt = `You are the voice assistant for "DIL KI RASOI" restaurant, managing the food ordering system. Your task is to understand natural language commands and perform actions accordingly.
+        const systemPrompt = `You are the voice assistant for "DIL KI RASOI" Clothing , managing the clothes ordering system. Your task is to understand natural language commands and perform actions accordingly.
 
 RESTAURANT INFORMATION:
-- Restaurant: DIL KI RASOI
-- Currency: Indian Rupees (₹)
+- Cothing Store: DIL KI RASIO
+- Currency: Dollars
 - Available Pages: Home, First, Second, Cart, Categories
 
 COMPLETE MENU ITEMS:

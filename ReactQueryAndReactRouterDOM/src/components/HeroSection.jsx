@@ -21,28 +21,28 @@ const HeroSection = () => {
           
           {/* Brand Header with Edgy Style */}
           <div className='BrandHeader'>
-            <div className='BrandName'>FASHION<span className='BrandAccent'>X</span></div>
-            <div className='BrandTagline'>ULTRA-FAST FASHION DELIVERY</div>
+            <div className='BrandName'>ECHO<span className='BrandAccent'>EATS</span></div>
+            <div className='BrandTagline'>ULTRA-FAST FOOD DELIVERY</div>
           </div>
 
           {/* Main Message with Gen Z Typography */}
           <div className='MainMessage'>
             <h2 className='HeroTitle'>
-              <span className='TitleLine'>YOUR STYLE,</span>
+              <span className='TitleLine'>RESTAURANT QUALITY,</span>
               <span className='TitleLine Highlight'>DELIVERED FAST</span>
-              <span className='TitleLine Timer'>30 MIN </span>
+              <span className='TitleLine Timer'>20 MIN </span>
             </h2>
             
             <p className='HeroDescription'>
-              Premium fashion with unprecedented speed. 
-              From curated collections to your doorstep in <span className='BoldText'>half an hour</span>.
+              Gourmet meals with unprecedented speed. 
+              From premium kitchens to your doorstep in <span className='BoldText'>under 20 minutes</span>.
             </p>
           </div>
 
           {/* Action Buttons - Blocky Style */}
           <div className='ActionButtons'>
             <button className='PrimaryButton'>
-              <span>SHOP NOW</span>
+              <span>ORDER NOW</span>
               <div className='ButtonIcon'>⚡</div>
             </button>
           </div>
@@ -53,23 +53,23 @@ const HeroSection = () => {
               <div className='FeatureIconBox'>⚡</div>
               <div className='FeatureContent'>
                 <div className='FeatureTitle'>ULTRA-FAST</div>
-                <div className='FeatureDesc'>30 min delivery</div>
+                <div className='FeatureDesc'>20 min delivery</div>
               </div>
               <div className='FeatureGlow'></div>
             </div>
             <div className='FeatureCard'>
-              <div className='FeatureIconBox'>👑</div>
+              <div className='FeatureIconBox'>👨‍🍳</div>
               <div className='FeatureContent'>
-                <div className='FeatureTitle'>PREMIUM</div>
-                <div className='FeatureDesc'>Top quality only</div>
+                <div className='FeatureTitle'>CHEF-CRAFTED</div>
+                <div className='FeatureDesc'>Restaurant quality</div>
               </div>
               <div className='FeatureGlow'></div>
             </div>
             <div className='FeatureCard'>
-              <div className='FeatureIconBox'>🔄</div>
+              <div className='FeatureIconBox'>🌡️</div>
               <div className='FeatureContent'>
-                <div className='FeatureTitle'>NO STRESS</div>
-                <div className='FeatureDesc'>Easy returns</div>
+                <div className='FeatureTitle'>HOT & FRESH</div>
+                <div className='FeatureDesc'>Temperature controlled</div>
               </div>
               <div className='FeatureGlow'></div>
             </div>
@@ -79,24 +79,24 @@ const HeroSection = () => {
         {/* Right Column - Product Cards */}
         <div className='HeroRight'>
           <div className='VisualContainer'>
-            {/* Floating Product Cards */}
+            {/* Floating Food Cards */}
             <div className='ProductCards'>
               <div className='Card card1'>
-                <div className='CardBadge'>NEW DROP</div>
-                <div className='CardImage'><img src="men_tshirt_03.jpeg" alt="Premium T-Shirt" /></div>
-                <div className='CardLabel'>ESSENTIALS</div>
+                <div className='CardBadge'>CHEF'S PICK</div>
+                <div className='CardImage'><img src="01_Margherita.jpeg" alt="Gourmet Burger" /></div>
+                <div className='CardLabel'>SIGNATURE</div>
               </div>
               
               <div className='Card card2'>
                 <div className='CardBadge'>TRENDING</div>
-                <div className='CardImage'><img src="women_shirt_03.jpeg" alt="Women's Shirt" /></div>
-                <div className='CardLabel'>COLLECTION</div>
+                <div className='CardImage'><img src="07_ChickenBiryani.jpeg" alt="Artisan Pizza" /></div>
+                <div className='CardLabel'>ITALIAN</div>
               </div>
               
               <div className='Card card3'>
-                <div className='CardBadge'>LIMITED</div>
-                <div className='CardImage'><img src="men_shirt_01.jpeg" alt="Men's Shirt" /></div>
-                <div className='CardLabel'>PREMIUM</div>
+                <div className='CardBadge'>HEALTHY</div>
+                <div className='CardImage'><img src="08_Thali.jpeg" alt="Premium Salad" /></div>
+                <div className='CardLabel'>FRESH</div>
               </div>
             </div>
           </div>

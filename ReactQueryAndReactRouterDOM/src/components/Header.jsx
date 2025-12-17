@@ -18,8 +18,8 @@ const Header = () => {
     <>
       <div className='Header_outer'>
         <div className='Logo'>
-          <img src="Skipp_logo.avif" alt="" />
-          <span> <a href="/" className='CompanyName'>SKIPP</a> </span>
+          <img src="ECHOEATS.png" alt="" />
+          <span> <a href="/" className='CompanyName'>ECHO EATS</a> </span>
         </div>
         <div className='List'>
           <ul>

@@ -53,7 +53,7 @@ const AppWrapper = ({ children }) => {
         navigate("/Cart");
         setCurrentPage("Cart");
         break;
-      case "First":
+      case "About":
         navigate("/First");
         setCurrentPage("First");
         break;

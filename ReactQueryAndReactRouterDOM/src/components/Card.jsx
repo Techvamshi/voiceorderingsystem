@@ -14,8 +14,8 @@ const Card = ({ id, name, price, imgs }) => {
 
         {/* Text */}
         <div className="card-text">
-          {name.split(' ')[3]} <br />
-          {name.split(' ')[4]}
+          {name.split(' ')[0]} <br />
+          {name.split(' ')[1]}
         </div>
 
         {/* ADD / COUNTER BUTTON */}

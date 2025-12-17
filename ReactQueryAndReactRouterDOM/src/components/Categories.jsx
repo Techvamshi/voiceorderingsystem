@@ -1,21 +1,19 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import "./HeaderCss.css";
 import { GlobalState } from '../App';
 import Card from './Card';
-import gsap from 'gsap';
 
 const Categories = () => {
   const { items, count, setCount } = useContext(GlobalState);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryItems, setCategoryItems] = useState([]);
   const [categories, setCategories] = useState([]);
-  const cardsRef = useRef([]);
-  const containerRef = useRef(null);
 
   useEffect(() => {
     const uniqueCategories = [...new Set(items.map(item => item.Category))];
     setCategories(uniqueCategories);
     
+    // If a category is selected, filter items
     if (selectedCategory) {
       const filtered = items.filter(item => 
         item.Category.toLowerCase() === selectedCategory.toLowerCase()
@@ -26,78 +24,28 @@ const Categories = () => {
     }
   }, [items, selectedCategory]);
 
-  useEffect(() => {
-    const handleCategorySelected = (event) => {
-      const category = event.detail.category;
-      if (category) {
-        setSelectedCategory(category);
-        fetchCategoryItems(category);
-      } else {
-        setSelectedCategory(null);
-        setCategoryItems(items);
-      }
-    };
 
-    window.addEventListener('categorySelected', handleCategorySelected);
-    
-    return () => {
-      window.removeEventListener('categorySelected', handleCategorySelected);
-    };
-  }, [items]);
-
-  // Initialize refs for animations
-  useEffect(() => {
-    cardsRef.current = cardsRef.current.slice(0, items.length);
-  }, [items.length]);
-
-  // Card hover zoom animation
-  const handleCardMouseEnter = (index) => {
-    if (cardsRef.current[index]) {
-      gsap.to(cardsRef.current[index], {
-        scale: 1.05,
-        duration: 0.2,
-        ease: "power2.out",
-        zIndex: 10
-      });
+useEffect(() => {
+  const handleCategorySelected = (event) => {
+    const category = event.detail.category;
+    if (category) {
+      setSelectedCategory(category);
+      fetchCategoryItems(category);
+    } else {
+      setSelectedCategory(null);
+      setCategoryItems(items);
     }
   };
 
-  const handleCardMouseLeave = (index) => {
-    if (cardsRef.current[index]) {
-      gsap.to(cardsRef.current[index], {
-        scale: 1,
-        duration: 0.2,
-        ease: "power2.out",
-        zIndex: 1
-      });
-    }
+  window.addEventListener('categorySelected', handleCategorySelected);
+  
+  return () => {
+    window.removeEventListener('categorySelected', handleCategorySelected);
   };
+}, [items]);
+ 
 
-  // Image zoom animation on card click
-  const handleCardClick = (index) => {
-    if (cardsRef.current[index]) {
-      const card = cardsRef.current[index];
-      const img = card.querySelector('img');
-      
-      if (img) {
-        const tl = gsap.timeline();
-        
-        tl.to(img, {
-          scale: 1.2,
-          duration: 0.5,
-          ease: "power2.out"
-        })
-        .to(img, {
-          scale: 1,
-          duration: 0.3,
-          ease: "power2.in",
-          delay: 0.5
-        });
-      }
-    }
-  };
-
-  // Function to fetch category items from backend
+// Function to fetch category items from backend
   const fetchCategoryItems = async (category) => {
     try {
       const response = await fetch(`http://localhost:3000/category/${category}`);
@@ -105,6 +53,7 @@ const Categories = () => {
       setCategoryItems(data.items);
     } catch (error) {
       console.error('Error fetching category items:', error);
+      // Fallback to local filtering
       const filtered = items.filter(item => 
         item.Category.toLowerCase() === category.toLowerCase()
       );
@@ -123,10 +72,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="categories-container" ref={containerRef}>
-      {/* Clean Pattern Overlay */}
-      <div className="pattern-overlay"></div>
-      
+    <div className="categories-container">
       <div className="categories-header">
         <p className="categories-subtitle">
           Browse our delicious offerings by category
@@ -154,6 +100,7 @@ const Categories = () => {
             className={`category-button ${selectedCategory === category ? 'active' : ''}`}
           >
             {category}
+         
           </button>
         ))}
       </div>
@@ -164,22 +111,14 @@ const Categories = () => {
           <>
             {categoryItems.length > 0 ? (
               <div className="CardsSection">
-                {categoryItems.map((item, index) => (
-                  <div 
+                {categoryItems.map(item => (
+                  <Card
                     key={item.FoodID}
-                    ref={el => cardsRef.current[index] = el}
-                    className="card-wrapper"
-                    onMouseEnter={() => handleCardMouseEnter(index)}
-                    onMouseLeave={() => handleCardMouseLeave(index)}
-                    onClick={() => handleCardClick(index)}
-                  >
-                    <Card
-                      id={item.FoodID}
-                      name={item.FoodName}
-                      price={item.Price}
-                      imgs={item.ImageName}
-                    />
-                  </div>
+                    id={item.FoodID}
+                    name={item.FoodName}
+                    price={item.Price}
+                    imgs={item.ImageName}
+                  />
                 ))}
               </div>
             ) : (
@@ -189,27 +128,40 @@ const Categories = () => {
         ) : (
           <>
             <div className="CardsSection">
-              {items.map((item, index) => (
-                <div 
+              {items.map(item => (
+                <Card
                   key={item.FoodID}
-                  ref={el => cardsRef.current[index] = el}
-                  className="card-wrapper"
-                  onMouseEnter={() => handleCardMouseEnter(index)}
-                  onMouseLeave={() => handleCardMouseLeave(index)}
-                  onClick={() => handleCardClick(index)}
-                >
-                  <Card
-                    id={item.FoodID}
-                    name={item.FoodName}
-                    price={item.Price}
-                    imgs={item.ImageName}
-                  />
-                </div>
+                  id={item.FoodID}
+                  name={item.FoodName}
+                  price={item.Price}
+                  imgs={item.ImageName}
+                />
               ))}
             </div>
           </>
         )}
       </div>
+
+      {/* Category Summary */}
+      {/* <div className="category-summary">
+        <h4>Category Summary</h4>
+        <div className="summary-grid">
+          {categories.map(category => {
+            const categoryItemCount = items.filter(item => item.Category === category).length;
+            const inCartCount = items
+              .filter(item => item.Category === category && count[item.FoodID] > 0)
+              .reduce((sum, item) => sum + (count[item.FoodID] || 0), 0);
+            
+            return (
+              <div key={category} className="summary-card">
+                <h5>{category}</h5>
+                <p>Items: {categoryItemCount}</p>
+                <p>In Cart: {inCartCount}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div> */}
     </div>
   );
 };

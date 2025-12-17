@@ -4,32 +4,32 @@ import './AboutPage.css'
 
 const AboutPage = () => {
   const milestones = [
-    { year: '2023', title: 'Founded', description: 'SKIPP was born with a vision to revolutionize fashion delivery' },
-    { year: '2024', title: 'First 1000 Orders', description: 'Delivered 1000+ orders with 30-min guarantee' },
-    { year: '2024', title: '5 Cities Launch', description: 'Expanded operations to 5 major metropolitan cities' },
-    { year: '2025', title: '1M+ Customers', description: 'Trusted by over 1 million satisfied customers' }
+    { year: '2023', title: 'Founded', description: 'ECHO EATS was born with a vision to revolutionize food delivery' },
+    { year: '2024', title: 'First 10,000 Meals', description: 'Delivered 10,000+ restaurant-quality meals with 20-min guarantee' },
+    { year: '2024', title: '8 Cities Launch', description: 'Expanded operations to 8 major metropolitan cities' },
+    { year: '2025', title: '500K+ Customers', description: 'Trusted by over 500,000 satisfied food lovers' }
   ]
 
   const values = [
     {
       icon: '⚡',
       title: 'Speed',
-      description: '30-minute delivery isn\'t just a promise, it\'s our standard.'
+      description: '20-minute delivery isn\'t just a promise, it\'s our standard.'
     },
     {
-      icon: '👑',
+      icon: '👨‍🍳',
       title: 'Quality',
-      description: 'Premium fashion that doesn\'t compromise on excellence.'
+      description: 'Restaurant-grade meals that don\'t compromise on taste or freshness.'
     },
     {
       icon: '💝',
       title: 'Customer First',
-      description: 'Every decision starts with our customer\'s satisfaction.'
+      description: 'Every decision starts with our customer\'s dining satisfaction.'
     },
     {
       icon: '🌱',
       title: 'Innovation',
-      description: 'Constantly evolving to deliver better experiences.'
+      description: 'Constantly evolving to deliver better culinary experiences.'
     }
   ]
 
@@ -42,21 +42,21 @@ const AboutPage = () => {
             <span>Our Story</span>
           </div>
           <h1 className="heroTitle">
-            Redefining Fashion
+            Redefining Food
             <span className="highlight"> Delivery</span>
           </h1>
           <p className="heroDescription">
-            SKIPP was born from a simple idea: great fashion should be instant. 
-            In a world where everything moves fast, why should your wardrobe wait?
+            ECHO EATS was born from a simple idea: gourmet food should be instant. 
+            In a world where everything moves fast, why should your dining experience wait?
           </p>
         </div>
         <div className="heroStats">
           <div className="statItem">
-            <div className="statNumber">30</div>
+            <div className="statNumber">20</div>
             <div className="statLabel">Minute Delivery</div>
           </div>
           <div className="statItem">
-            <div className="statNumber">1M+</div>
+            <div className="statNumber">500K+</div>
             <div className="statLabel">Happy Customers</div>
           </div>
           <div className="statItem">
@@ -71,12 +71,12 @@ const AboutPage = () => {
         <div className="missionContent">
           <h2 className="sectionTitle">Our Mission</h2>
           <p className="missionText">
-            To make luxury fashion accessible at the speed of thought. 
-            We're not just delivering clothes; we're delivering confidence, 
-            style, and moments that matter—all within 30 minutes.
+            To make restaurant-quality dining accessible at the speed of thought. 
+            We're not just delivering food; we're delivering experiences, 
+            flavors, and moments that matter—all within 20 minutes.
           </p>
           <div className="missionQuote">
-            "Fashion that keeps up with your life, not the other way around."
+            "Restaurant-quality meals that keep up with your life, not the other way around."
           </div>
         </div>
         <div className="missionVisual">
@@ -94,7 +94,7 @@ const AboutPage = () => {
         <div className="sectionHeader">
           <h2 className="sectionTitle">The Visionaries</h2>
           <p className="sectionSubtitle">
-            Meet the minds behind the 30-minute fashion revolution
+            Meet the minds behind the 20-minute culinary revolution
           </p>
         </div>
 
@@ -103,11 +103,11 @@ const AboutPage = () => {
           <div className="founderCard">
             <div className="founderImageContainer">
               <div className="founderImagePlaceholder">
-                <div className="imageInitial">VC</div>
+                <div className="imageInitial">YS</div>
               </div>
               <div className="founderSocial">
                 <a 
-                  href="https://www.linkedin.com/in/varun-chauhan-772398237/" 
+                  href="https://www.linkedin.com/in/yashaswini-sajjanshettar/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="socialLink"
@@ -118,14 +118,14 @@ const AboutPage = () => {
             </div>
             <div className="founderInfo">
               <div className="founderRole">Founder & CEO</div>
-              <h3 className="founderName">Varun Chauhan</h3>
+              <h3 className="founderName">Yashaswini Sajjanshettar</h3>
               <p className="founderBio">
-                With a background in logistics and a passion for fashion, 
-                Varun envisioned a world where style meets speed. His leadership 
-                drives SKIPP's innovative delivery solutions.
+                With a background in culinary arts and hospitality management, 
+                Yashaswini envisioned a world where gourmet dining meets speed. 
+                Her leadership drives ECHO EATS's innovative food delivery solutions.
               </p>
               <div className="founderQuote">
-                "If we can deliver food in 30 minutes, why not fashion?"
+                "If we can deliver instant messaging, why not instant fine dining?"
               </div>
             </div>
             <div className="founderAccent"></div>
@@ -135,11 +135,11 @@ const AboutPage = () => {
           <div className="founderCard">
             <div className="founderImageContainer">
               <div className="founderImagePlaceholder">
-                <div className="imageInitial">AK</div>
+                <div className="imageInitial">VD</div>
               </div>
               <div className="founderSocial">
                 <a 
-                  href="https://www.linkedin.com/in/abhishekkumar-dev/" 
+                  href="https://www.linkedin.com/in/duvamshi/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="socialLink"
@@ -150,13 +150,14 @@ const AboutPage = () => {
             </div>
             <div className="founderInfo">
               <div className="founderRole">Co-Founder & CTO</div>
-              <h3 className="founderName">Abhishek Kumar</h3>
+              <h3 className="founderName">Vamshi D U</h3>
               <p className="founderBio">
-                Tech visionary who built the backbone of SKIPP's delivery network. 
-                His expertise in scalable systems ensures seamless 30-minute deliveries.
+                Tech visionary who built the backbone of ECHO EATS's delivery network. 
+                His expertise in scalable systems ensures seamless 20-minute deliveries 
+                while maintaining food quality and temperature.
               </p>
               <div className="founderQuote">
-                "Technology should simplify life, not complicate it."
+                "Technology should enhance dining experiences, not complicate them."
               </div>
             </div>
             <div className="founderAccent"></div>
@@ -169,7 +170,7 @@ const AboutPage = () => {
         <div className="sectionHeader">
           <h2 className="sectionTitle">Our Values</h2>
           <p className="sectionSubtitle">
-            The principles that guide every delivery
+            The principles that guide every meal delivery
           </p>
         </div>
         <div className="valuesGrid">
@@ -188,7 +189,7 @@ const AboutPage = () => {
         <div className="sectionHeader">
           <h2 className="sectionTitle">Our Journey</h2>
           <p className="sectionSubtitle">
-            From an idea to a fashion revolution
+            From an idea to a culinary revolution
           </p>
         </div>
         <div className="timeline">
@@ -209,10 +210,10 @@ const AboutPage = () => {
       {/* CTA Section */}
       <div className="aboutCTA">
         <div className="ctaContent">
-          <h2 className="ctaTitle">Join the Revolution</h2>
+          <h2 className="ctaTitle">Join the Culinary Revolution</h2>
           <p className="ctaDescription">
-            Experience fashion at the speed of now. Download our app and get 
-            your first delivery in 30 minutes or less.
+            Experience restaurant-quality meals at the speed of now. Download our app and get 
+            your first delivery in 20 minutes or less.
           </p>
           <div className="ctaButtons">
             <button className="ctaButton primary">

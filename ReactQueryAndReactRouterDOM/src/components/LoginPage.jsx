@@ -48,8 +48,8 @@ const LoginPage = () => {
       <div className="login-wrapper">
         {/* Brand Header */}
         <div className="login-brand">
-          <h1 className="login-brand-name">SKIPP</h1>
-          <p className="login-brand-tagline">Fast Fashion Delivery</p>
+          <h1 className="login-brand-name">ECHO EATS</h1>
+          <p className="login-brand-tagline">Fast Food Delivery</p>
         </div>
 
         <div className="login-container">
